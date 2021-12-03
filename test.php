@@ -36,13 +36,13 @@ class Api
 		$result = '';
 
 		/* Здесь ваш код */
-        $replacements = [];
-        foreach ($array as $key => $item) {
-            $new_key = "%{$key}%";
-            $replacements[$new_key] = $item;
-        }
+		$replacements = [];
+		foreach ($array as $key => $item) {
+		    $new_key = "%{$key}%";
+		    $replacements[$new_key] = $item;
+		}
 
-        $result = str_replace(array_keys($replacements), array_values($replacements), $template);
+		$result = str_replace(array_keys($replacements), array_values($replacements), $template);
 
 		return $result;
 	}
